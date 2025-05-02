@@ -12,6 +12,37 @@ st.set_page_config(
     layout="wide"
 )
 
+# Estilo personalizado con fondo y texto rosados
+st.markdown(
+    """
+    <style>
+        body {
+            background-color: #f8bbd0;
+            color: #d81b60;
+        }
+        .css-ffhzg2 {
+            color: #d81b60;
+        }
+        .stButton>button {
+            background-color: #f06292;
+            color: white;
+        }
+        .stSlider>div>div>div {
+            background-color: #f06292;
+        }
+        .stCheckbox>div>div>div {
+            color: #d81b60;
+        }
+        .stTextInput>div>div>input {
+            color: #d81b60;
+        }
+        .stCameraInput>div>div>div {
+            border-color: #f06292;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 @st.cache_resource
 def load_yolov5_model(model_path='yolov5s.pt'):
     try:
